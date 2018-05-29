@@ -10,22 +10,22 @@ Steps to produce this basic project shell.
 5. If this project type is not available, you need to install the MvvmLight **extension**. [see here](http://www.mvvmlight.net/installing/)
 6. Build the project in VS2017 to make sure there are no errors
 7. Close the first VS solution, and create a new one, with a new project. Use the exact same name as the first project, but save this in your normal code folder
-8. This time, choose the project type *Moble App (Xamarin.Forms)*
+8. This time, choose the project type *Mobile App (Xamarin.Forms)*
 
     a. use the **Shared Project** Code Sharing Strategy
     
 9. This new project will not have the sample folders with a View Model and a View Model Locator. We'll copy them from the first project
-10. Inside VS, with the second project/solution open, manually add new folders in the **shared** code project (not the project whose name ends in .OS, .Android, or .UWP).
+10. Inside VS, with the second project/solution open, manually add 3 new folders in the **shared** code project (not the project whose name ends in .OS, .Android, or .UWP). **Add->New Folder** for "Model", "ViewModel", and "Design"
 11. Using Windows Explorer, copy the `ViewModel`, `Model`, and `Design` folders from the first project into the second
 
     a. These 3 folders should be stored in the same project folder that will have App.xaml and MainPage.xaml
     b. Step 10 should already have created the folders. Just add the C# files to them from the first project
     
-12. Right-click on each folder (ViewModel, Model, and Design) in VS and choose **Add->Existing Items** to add these files to the shared project
-13. Using the NuGet package manager, add the MvvmLight and CommonServiceLocator libraries to your solution, for **all** projects
+12. Right-click on each folder (ViewModel, Model, and Design) in VS and choose **Add->Existing Items** to include these files in the shared project
+13. Using the NuGet package manager, add the *MvvmLight* and *CommonServiceLocator* libraries to your solution, for **all** projects
 14. In the code I moved in, I needed to change `using Microsoft.Practices.ServiceLocation;
 ` to `using CommonServiceLocator;` because the code wouldn't compile for me
-15. In the App.xaml file, add a resource for your ViewModelLocator class:
+15. In the App.xaml file, add a resource for your ViewModelLocator helper class:
 
 ```xml
 
