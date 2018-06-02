@@ -135,10 +135,20 @@ namespace XamarinMvvmLightTest.ViewModel
             }
         }
 
+        public MainViewModel() :
+            this(new DataService(), null)
+        {
+            // This no argument constructor is needed for the ViewModelLocator to create an instance of
+            //  this view model. The INavigationService is a UI feature that was not copied into this 
+            //  project from the original sample code, and so null is passed for the navigation service here.
+            // NOTE: in production, we would do this differently, to allow different IDataService and
+            //  INavigationService instances to be passed in. This is just for making the basic test work.
+        }
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel(
+        protected MainViewModel(
             IDataService dataService,
             INavigationService navigationService)
         {
