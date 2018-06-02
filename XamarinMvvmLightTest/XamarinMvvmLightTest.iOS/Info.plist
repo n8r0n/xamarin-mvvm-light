@@ -21,11 +21,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>11.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>XamarinMvvmLightTest</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.XamarinMvvmLightTest</string>
+	<string>com.enscand.XamarinMvvmLightTest</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
